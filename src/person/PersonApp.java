@@ -16,18 +16,15 @@ public class PersonApp {
 
 		PeopleList people = new PeopleList();
 
-		people.list.add(person1);
-		people.list.add(person2);
-		people.list.add(person3);
-		people.list.add(person4);
+		people.addPerson(person1);
+		people.addPerson(person2);
+		people.addPerson(person3);
+		people.addPerson(person4);
 
-		returnName(people);
+		System.out.println(people.findPersonByName("Jeff").toString());
+
+		people.returnName();
 
 	}
 
-	public static void returnName(PeopleList people) {
-		for (Person person : people.list) {
-			System.out.println(person.getName());
-		}
-	}
 }
